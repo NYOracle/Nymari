@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #fdfdfd;
+  background: linear-gradient(135deg, #0b0c1d, #2c2d3f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.landing .center-content {
+  text-align: center;
+}
+
+.enter-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+.enter-button:hover {
+  box-shadow: 0 0 20px #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.starfield::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 10px 10px;
+  animation: twinkle 8s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes twinkle {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-50%, -50%); }
+}
+
+.card-reading {
+  text-align: center;
+}
+
+#pullCard {
+  padding: 10px 25px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  background: #3a3b5a;
+  color: white;
+  cursor: pointer;
+}
+
+#cardContainer {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+#cardContainer.visible {
+  opacity: 1;
+}
+
+.typed-text {
+  font-style: italic;
+  margin-top: 15px;
+}
